@@ -1,5 +1,5 @@
 import Image from "next/image"; 
-import { SwipeCarousel } from "../app/components/carousel";
+import { SwipeCarousel } from "./components/Carousel";
 
 export default function Home() {
   return (
