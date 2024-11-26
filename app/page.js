@@ -1,10 +1,33 @@
-import Image from "next/image"; 
+"use client"
+ 
 import { SwipeCarousel } from "./components/Carousel";
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleToggle = () => {
+    setIsActive((prevState) => !prevState);
+  };
+
+  useEffect(() => {
+    const body = document.body;
+    if (isActive) {
+      body.classList.add('header--menu-open');
+    } else {
+      body.classList.remove('header--menu-open');
+    }
+
+    // Cleanup function to remove the class if the component unmounts
+    return () => {
+      body.classList.remove('header--menu-open');
+    };
+  }, [isActive]);
+
+
   return (
     <>
-    <SwipeCarousel/>
+      <SwipeCarousel />
       <div id="siteWrapper" className="clearfix site-wrapper">
         <div id="floatingCart" className="floating-cart hidden">
           <a
@@ -228,7 +251,7 @@ header theme-col--primary
           <div className="sqs-announcement-bar-dropzone" />
           <div className="header-announcement-bar-wrapper">
             <a
-              href="index.html#page"
+              href="/#page"
               className="header-skip-link sqs-button-element--primary"
             >
               Skip to Content
@@ -300,7 +323,7 @@ header theme-col--primary
                     <div className="header-title-logo">
                       <a href="/" data-animation-role="header-element">
                         <h2>JAD ZEITOUNI</h2>
-                      
+
                       </a>
                     </div>
                   </div>
@@ -325,8 +348,8 @@ header theme-col--primary
                             data-animation-role="header-element"
                           >
                             Exhibitions
-                          </a> 
-                        </div> 
+                          </a>
+                        </div>
                         <div className="header-nav-item header-nav-item--folder">
                           <a
                             className="header-nav-folder-title"
@@ -335,8 +358,8 @@ header theme-col--primary
                             data-animation-role="header-element"
                           >
                             Blog
-                          </a> 
-                        </div> 
+                          </a>
+                        </div>
                         <div className="header-nav-item header-nav-item--collection">
                           <a href="about.html" data-animation-role="header-element">
                             About
@@ -378,30 +401,31 @@ header theme-col--primary
 "
                   data-animation-role="header-element"
                 >
-                  <button
-                    className="header-burger-btn burger"
-                    data-test="header-burger"
-                  >
-                    <span
-                      hidden=""
-                      className="js-header-burger-open-title visually-hidden"
-                    >
-                      Open Menu
-                    </span>
-                    <span
-                      hidden=""
-                      className="js-header-burger-close-title visually-hidden"
-                    >
-                      Close Menu
-                    </span>
-                    <div className="burger-box">
-                      <div className="burger-inner header-menu-icon-doubleLineHamburger">
-                        <div className="top-bun" />
-                        <div className="patty" />
-                        <div className="bottom-bun" />
-                      </div>
-                    </div>
-                  </button>
+ <button
+      className={`header-burger-btn burger ${isActive ? 'burger--active' : ''}`}
+      data-test="header-burger"
+      onClick={handleToggle}
+    >
+      <span
+        hidden={isActive}
+        className="js-header-burger-open-title visually-hidden"
+      >
+        Open Menu
+      </span>
+      <span
+        hidden={!isActive}
+        className="js-header-burger-close-title visually-hidden"
+      >
+        Close Menu
+      </span>
+      <div className="burger-box">
+        <div className="burger-inner header-menu-icon-doubleLineHamburger">
+          <div className="top-bun" />
+          <div className="patty" />
+          <div className="bottom-bun" />
+        </div>
+      </div>
+    </button>
                 </div>
               </div>
               <div
@@ -420,17 +444,8 @@ header theme-col--primary
                     data-animation-role="header-element"
                   >
                     <div className="header-title-logo">
-                      <a href="index.html" data-animation-role="header-element">
-                        <img
-                          elementtiming="nbf-header-logo-desktop"
-                          src="https://images.squarespace-cdn.com/content/v1/57d083042e69cf8d9a5e056e/47867e02-0ddd-41ff-bb94-3fe6eb0d44bf/BH-Logo.png?format=1500w"
-                          alt="Jad Zeitouni"
-                          style={{ display: "block" }}
-                          fetchpriority="high"
-                          loading="eager"
-                          decoding="async"
-                          data-loader="raw"
-                        />
+                      <a href="/" data-animation-role="header-element">
+                      <h2>JAD ZEITOUNI</h2>
                       </a>
                     </div>
                   </div>
@@ -440,7 +455,7 @@ header theme-col--primary
                       <nav className="header-nav-list">
                         <div className="header-nav-item header-nav-item--collection  header-nav-item--homepage">
                           <a
-                            href="index.html"
+                            href="/"
                             data-animation-role="header-element"
                             aria-current="page"
                           >
@@ -533,30 +548,31 @@ header theme-col--primary
 "
                   data-animation-role="header-element"
                 >
-                  <button
-                    className="header-burger-btn burger"
-                    data-test="header-burger"
-                  >
-                    <span
-                      hidden=""
-                      className="js-header-burger-open-title visually-hidden"
-                    >
-                      Open Menu
-                    </span>
-                    <span
-                      hidden=""
-                      className="js-header-burger-close-title visually-hidden"
-                    >
-                      Close Menu
-                    </span>
-                    <div className="burger-box">
-                      <div className="burger-inner header-menu-icon-doubleLineHamburger">
-                        <div className="top-bun" />
-                        <div className="patty" />
-                        <div className="bottom-bun" />
-                      </div>
-                    </div>
-                  </button>
+ <button
+      className={`header-burger-btn burger ${isActive ? 'burger--active' : ''}`}
+      data-test="header-burger"
+      onClick={handleToggle}
+    >
+      <span
+        hidden={isActive}
+        className="js-header-burger-open-title visually-hidden"
+      >
+        Open Menu
+      </span>
+      <span
+        hidden={!isActive}
+        className="js-header-burger-close-title visually-hidden"
+      >
+        Close Menu
+      </span>
+      <div className="burger-box">
+        <div className="burger-inner header-menu-icon-doubleLineHamburger">
+          <div className="top-bun" />
+          <div className="patty" />
+          <div className="bottom-bun" />
+        </div>
+      </div>
+    </button>
                 </div>
               </div>
             </div>
@@ -749,67 +765,30 @@ header theme-col--primary
                     {/* Menu Navigation */}
                     <div className="header-menu-nav-wrapper">
                       <div className="container header-menu-nav-item header-menu-nav-item--collection header-menu-nav-item--active header-menu-nav-item--homepage">
-                        <a href="index.html" aria-current="page">
-                          <div className="header-menu-nav-item-content">Home</div>
+                        <a href="/" aria-current="page">
+                          <div className=" ">Home</div>
                         </a>
                       </div>
                       <div className="container header-menu-nav-item">
-                        <a data-folder-id="/courses" href="courses.html">
-                          <div className="header-menu-nav-item-content">
-                            <span className="visually-hidden">Folder:</span>
-                            <span>Courses</span>
-                            <span className="chevron chevron--right" />
+                        <a data-folder-id="/courses" href="/about">
+                          <div className="header-menu-nav-item-content"> 
+                            <span>About</span> 
                           </div>
                         </a>
-                      </div>
-                      <div
-                        data-folder="/courses"
-                        className="header-menu-nav-folder"
-                      >
-                        <div className="header-menu-nav-folder-content">
-                          <div className="header-menu-controls container header-menu-nav-item">
-                            <a
-                              className="header-menu-controls-control header-menu-controls-control--active"
-                              data-action="back"
-                              href="index.html"
-                            >
-                              <span className="chevron chevron--left" />
-                              <span>Back</span>
-                            </a>
-                          </div>
-                          <div className="container header-menu-nav-item">
-                            <a href="courses.html">
-                              <div className="header-menu-nav-item-content">
-                                The Nature Filmmaking Academy
-                              </div>
-                            </a>
-                          </div>
-                          <div className="container header-menu-nav-item header-menu-nav-item--external">
-                            <a
-                              href="https://benjaminhardman.teachable.com/p/masterclass"
-                              target="_blank"
-                            >
-                              Photography Editing Masterclass
-                            </a>
-                          </div>
-                        </div>
-                      </div>
+                      </div> 
                       <div className="container header-menu-nav-item header-menu-nav-item--external">
                         <a
-                          href="https://store.benjaminhardman.com/"
+                          href="/exhibitions"
                           target="_blank"
                         >
-                          Prints
+                          Exhibitions
                         </a>
-                      </div>
-                      <div className="container header-menu-nav-item header-menu-nav-item--external">
-                        <a href="https://stormexped.com" target="_blank">
-                          Expeditions
-                        </a>
-                      </div>
+                      </div>  
                       <div className="container header-menu-nav-item header-menu-nav-item--collection">
-                        <a href="about.html">
-                          <div className="header-menu-nav-item-content">About</div>
+                        <a href="contact.html">
+                          <div className="header-menu-nav-item-content">
+                            Blog
+                          </div>
                         </a>
                       </div>
                       <div className="container header-menu-nav-item header-menu-nav-item--collection">
@@ -1027,13 +1006,13 @@ content-width--wide
                                 Jad Zeitouni
                               </h2>
                               <h3 style={{ whiteSpace: "pre-wrap" }}>
-                              Engineer|Artist|Dreamer|Visionary
+                                Engineer|Artist|Dreamer|Visionary
                               </h3>
                               <p
                                 className="sqsrte-small"
                                 style={{ whiteSpace: "pre-wrap" }}
                               >
-                                Jad Zeitouni is a Lebanese self-taught artist who believes painting is a latent talent 
+                                Jad Zeitouni is a Lebanese self-taught artist who believes painting is a latent talent
                               </p>
                             </div>
                           </div>
@@ -1176,7 +1155,7 @@ content-width--wide
                               }}
                             />
                             <nav className="flex space-x-4 sqs-svg-icon--list">
-                            <a
+                              <a
                                 href="https://www.instagram.com/zeitounijad.art"
                                 target="_blank"
                                 rel="noopener noreferrer"
