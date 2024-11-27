@@ -1,6 +1,6 @@
 "use client"
  
-import { SwipeCarousel } from "./components/Carousel";
+import  SwipeCarousel  from "./components/Carousel";
 import { useState, useEffect } from 'react';
 
 export default function Home() {
