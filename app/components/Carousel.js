@@ -8,20 +8,31 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const SwipeCarousel = () => {
-  // Mobile and Desktop Images
+  // Updated Mobile and Desktop Images
   const desktopImages = [
-    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732544377/a7ms6gpvf8pazp2w4xnx.jpg",
-    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732544377/pf7y5xumkzy0ygrfaivl.jpg",
-    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732544377/oi5yp7ltsqf3hoiu4akz.jpg",
-    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732544377/ccfuqy7vvgvpmeae9xqh.jpg",
-    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732544377/xzg206qbmemikvfvv8xw.jpg",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866793/y08v8w1e4joyveaz2ewy.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866793/pc7nsc43dl5ugzmqvdpa.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866790/n6tsnhyh6bpqgzxzlaed.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866786/rrdwjbgibaptbsiegacz.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866785/ghymo5j8t5bwjzpnzb7t.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866779/obo9u3jmgggbkpv2aofo.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866775/bpcflqz1gunl1uuhn9ke.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866772/q2bof4rsbueg1qkzji65.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866771/z2lz7fmgnkdga5bqobrj.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866767/q5hhxlw9bsxs7igocusc.webp",
   ];
 
   const mobileImages = [
-    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732642249/xxnkymtjg3k6g4ssbuvw.jpg",
-    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732642248/d64wmkjccgmeuaavhcrw.jpg",
-    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732642246/fenjecnzfsq0dat2dxyk.jpg",
-    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732642244/m2wjgb8sbyh2ele0id0c.jpg",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866636/l77czb7hr8alhpoy2iis.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866635/rh7gnviilqvkncqn5exy.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866632/vov2hmyuiisl6rr6yk7k.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866630/sslmakj5adfuimxsrbik.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866629/kiiedezitlw1mfn9hiox.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866628/bv5glr0e72jtjlfeacna.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866626/fvril3vsrt9psesfheca.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866624/pxvakrqcdgcndr6l9r8q.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866624/d7q1ahxsnt4jxfdpskqm.webp",
+    "https://res.cloudinary.com/dubdpmdwp/image/upload/v1732866623/njr7natwyqwewlmlyuql.webp",
   ];
 
   // Determine screen size for responsive images
