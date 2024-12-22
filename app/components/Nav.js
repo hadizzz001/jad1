@@ -329,6 +329,16 @@ header-layout-nav-right
                       Blog
                     </a>
                   </div>
+                  <div className="header-nav-item header-nav-item--folder">
+                    <a
+                      className="header-nav-folder-title"
+                      href="/catalog"
+                      tabIndex={-1}
+                      data-animation-role="header-element"
+                    >
+                      Catalog
+                    </a>
+                  </div>
                   <div className="header-nav-item header-nav-item--collection">
                     <a href="/about" data-animation-role="header-element">
                       About
@@ -757,6 +767,13 @@ onClick={handleToggle}
                   <a href="/blog">
                     <div className="header-menu-nav-item-content">
                       Blog
+                    </div>
+                  </a>
+                </div>
+                <div className="container header-menu-nav-item header-menu-nav-item--collection">
+                  <a href="/catalog">
+                    <div className="header-menu-nav-item-content">
+                      Catalog
                     </div>
                   </a>
                 </div>

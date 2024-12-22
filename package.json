@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^16.0.0",
+    "@contentful/rich-text-react-renderer": "^16.0.1",
+    "@contentful/rich-text-types": "^17.0.0",
     "@fortawesome/fontawesome-free": "^6.7.1",
     "autoprefixer": "^10.4.20",
     "bootstrap": "^5.3.3",
