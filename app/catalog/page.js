@@ -16,7 +16,7 @@ const BlogPage = async () => {
     <>
     <Nav/>
     <div className="mt-20 blog-list">
-      <h1>Our Blog</h1>
+      <h1>Our Catalogs</h1>
       <div className="blog-grid">
         {posts.map((post) => {
           // Safely extract content preview
