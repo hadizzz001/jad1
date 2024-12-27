@@ -14,36 +14,40 @@ const BlogPage = async () => {
 
   return (
     <>
-    <Nav/>
-    <div className="mt-20 blog-list">
-      <h1>Our Blog</h1>
-      <div className="blog-grid">
-        {posts.map((post) => {
-          // Safely extract content preview
-          const contentPreview =
-            post.fields.content?.content?.[0]?.content?.[0]?.value || 'No content available';
+      <Nav />
+      <div className="mt-20 blog-list">
+        <h1>Our Blog</h1>
+        <div className="blog-grid">
+          {posts.map((post) => {
+            const contentPreview =
+              post.fields.content?.content?.[0]?.content?.[0]?.value || 'No content available';
+            const imageUrl = post.fields.featuredImage?.fields?.file?.url || '/default-image.jpg';
 
-          return (
-            <div key={post.sys.id} className="blog-card">
-              <img
-                src={post.fields.featuredImage.fields.file.url}
-                alt={post.fields.title}
-                className="blog-image"
-              />
-              <div className="blog-content">
-                <h2>{post.fields.title}</h2>
-                <p>{new Date(post.fields.publishedDate).toDateString()}</p>
-                <p>{contentPreview.slice(0, 100)}...</p>
-                <Link href={`/blog/${post.fields.slug}`} className="read-more">
-                  Read More
-                </Link>
+            return (
+              <div key={post.sys.id} className="blog-card">
+                <img
+                  src={imageUrl}
+                  alt={post.fields.title || 'Blog Image'}
+                  className="blog-image"
+                />
+                <div className="blog-content">
+                  <h2>{post.fields.title || 'Untitled'}</h2>
+                  <p>
+                    {post.fields.publishedDate
+                      ? new Date(post.fields.publishedDate).toDateString()
+                      : 'No date'}
+                  </p>
+                  <p>{contentPreview.slice(0, 100)}...</p>
+                  <Link href={`/blog/${post.fields.slug || '#'}`} className="read-more">
+                    Read More
+                  </Link>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
-    </div>
-    <Footer/>
+      <Footer />
     </>
   );
 };
