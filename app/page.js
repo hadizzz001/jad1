@@ -237,14 +237,14 @@ content-width--wide
     <div className="sqs-block-content">
       <div className="sqs-html-content">
         <h2 style={{ whiteSpace: "pre-wrap" }}>Jad Zeitouni</h2>
-        <h3 style={{ whiteSpace: "pre-wrap" }}>
+        <h3 style={{ whiteSpace: "no-wrap" ,fontSize: "11px"}}>
           Engineer | Artist | Dreamer | Visionary
         </h3>
         <p
           className="sqsrte-small"
           style={{ whiteSpace: "pre-wrap" }}
         >
-          Jad Zeitouni is a Lebanese self-taught artist who believes painting is a latent talent.
+          Art has taught me to see beyond the ordinary, to embrace the unexpected, and to fill life with as much color as I can
         </p>
         {/* Add icons section */}
         <div className="icon-links" style={{ marginTop: "1rem", display: "flex", gap: "1rem", justifyContent: "center" }}>
