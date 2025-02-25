@@ -322,11 +322,11 @@ header-layout-nav-right
                   <div className="header-nav-item header-nav-item--folder">
                     <a
                       className="header-nav-folder-title"
-                      href="/blog"
+                      href="https://jadzeitouni.blogspot.com/"
                       tabIndex={-1}
                       data-animation-role="header-element"
                     >
-                      Blog
+                      Google Blog
                     </a>
                   </div>
                   <div className="header-nav-item header-nav-item--folder">
@@ -764,9 +764,9 @@ onClick={handleToggle}
                   </a>
                 </div>  
                 <div className="container header-menu-nav-item header-menu-nav-item--collection">
-                  <a href="/blog">
+                  <a href="https://jadzeitouni.blogspot.com/">
                     <div className="header-menu-nav-item-content">
-                      Blog
+                      Google Blog
                     </div>
                   </a>
                 </div>
