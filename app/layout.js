@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
   <link
     rel="icon"
     type="image/x-icon"
-    href="https://images.squarespace-cdn.com/content/v1/57d083042e69cf8d9a5e056e/1563462957656-CIH8FF2PIG24V9ME0Q06/favicon.ico?format=100w"
+    href="/logo1.jpg"
   />
   <link rel="canonical" href="index.html" />
   <meta property="og:site_name" content="Jad Zeitouni" />
@@ -76,7 +76,7 @@ export default function RootLayout({ children }) {
     name="twitter:image"
     content="https://res.cloudinary.com/dubdpmdwp/image/upload/v1743879473/sbbbotlexw87dda1ojdo.webp"
   />
-  <meta name="twitter:url" content="https://benjaminhardman.com" />
+  <meta name="twitter:url" content="https://jadzeitouni.com" />
   <meta name="twitter:card" content="summary" />
   <meta
     name="twitter:description"
@@ -98,17 +98,7 @@ photographer Jad Zeitouni."
     type="text/css"
     href="https://static1.squarespace.com/static/versioned-site-css/57d083042e69cf8d9a5e056e/257/5c5a519771c10ba3470d8101/671579b5fa25590d4726d821/1587/site.css"
   />
-  {/* Facebook Pixel Code */}
-  <noscript>
-    &lt;img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1082599388742882&amp;ev=PageView&amp;noscript=1"
-    /&gt;
-  </noscript>
-  {/* End Facebook Pixel Code */}
-  {/* Global site tag (gtag.js) - Google Analytics */}
-  {/* Google Tag Manager */}
-  {/* End Google Tag Manager */}
-  {/* End of Squarespace Headers */}
+ 
   <link
     rel="stylesheet"
     type="text/css"
