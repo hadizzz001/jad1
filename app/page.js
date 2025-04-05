@@ -1,15 +1,31 @@
-"use client"
  
-import  SwipeCarousel  from "./components/Carousel";
+  
 import  Footer  from "./components/Footer";
 import  Nav  from "./components/Nav";
+import Data1 from "./components/Data1";
+import { client } from './lib/contentful';
 
 
-export default function Home() {
-  
+const fetchPosts = async () => {
+  const response = await client.getEntries({ content_type: 'exh' });
+  return response.items;
+};
+
+
+ 
+const ExhibitionGallery = async () => {
+
+ 
+  const posts = await fetchPosts(); 
+
+
   return (
-    <>
-      <SwipeCarousel />
+
+    <> 
+
+      <Data1 posts={posts} />
+
+
       <div id="siteWrapper" className="clearfix site-wrapper">
         <div id="floatingCart" className="floating-cart hidden">
           <a
@@ -288,3 +304,6 @@ content-width--wide
 
   );
 }
+
+
+export default ExhibitionGallery;

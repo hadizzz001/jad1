@@ -2,10 +2,11 @@
 import React, { useState } from "react";
 
 
+
 const Data = (posts) => {
     const [selectedImage, setSelectedImage] = useState(null);
 
-    console.log("posts: ", posts.posts);
+ 
     
 
   return (
@@ -14,19 +15,7 @@ const Data = (posts) => {
     <div className="container mx-auto px-4">
       <h1 className="text-3xl font-bold text-center mb-6">Exhibition Gallery</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {/* {images.map((url, index) => (
-          <div
-            key={index}
-            className="overflow-hidden rounded-lg shadow-md cursor-pointer"
-            onClick={() => setSelectedImage(url)}
-          >
-            <img
-              src={url}
-              alt={`Exhibition Image ${index + 1}`}
-              className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-        ))} */}
+ 
 
 
 
