@@ -3,11 +3,13 @@
 import  Footer  from "./components/Footer";
 import  Nav  from "./components/Nav";
 import Data1 from "./components/Data1";
+import Data2 from "./components/Data2";
+import Data3 from "./components/Data3";
 import { client } from './lib/contentful';
 
 
 const fetchPosts = async () => {
-  const response = await client.getEntries({ content_type: 'exh' });
+  const response = await client.getEntries({ content_type: 'home' });
   return response.items;
 };
 
@@ -17,8 +19,7 @@ const ExhibitionGallery = async () => {
 
  
   const posts = await fetchPosts(); 
-
-
+ 
   return (
 
     <> 
@@ -204,32 +205,7 @@ content-width--wide
                                     height: "100%"
                                   }}
                                 >
-                                  <div className="content-fill">
-                                    <img
-                                      data-stretch="true"
-                                      data-src="https://res.cloudinary.com/dubdpmdwp/image/upload/v1732545304/av57z2ecunt1vvxhscgi.jpg"
-                                      data-image="https://res.cloudinary.com/dubdpmdwp/image/upload/v1732545304/av57z2ecunt1vvxhscgi.jpg"
-                                      data-image-dimensions="3484x4355"
-                                      data-image-focal-point="0.5,0.5"
-                                      alt=""
-                                      data-load="false"
-                                      elementtiming="system-image-block"
-                                      src="https://res.cloudinary.com/dubdpmdwp/image/upload/v1732545304/av57z2ecunt1vvxhscgi.jpg"
-                                      width={3484}
-                                      height={4355}
-                                      sizes="100vw"
-                                      style={{
-                                        display: "block",
-                                        objectFit: "cover",
-                                        objectPosition: "50% 50%"
-                                      }}
-                                      srcSet="https://res.cloudinary.com/dubdpmdwp/image/upload/v1732545304/av57z2ecunt1vvxhscgi.jpg?format=100w 100w, https://res.cloudinary.com/dubdpmdwp/image/upload/v1732545304/av57z2ecunt1vvxhscgi.jpg?format=300w 300w, https://res.cloudinary.com/dubdpmdwp/image/upload/v1732545304/av57z2ecunt1vvxhscgi.jpg?format=500w 500w, https://res.cloudinary.com/dubdpmdwp/image/upload/v1732545304/av57z2ecunt1vvxhscgi.jpg?format=750w 750w, https://res.cloudinary.com/dubdpmdwp/image/upload/v1732545304/av57z2ecunt1vvxhscgi.jpg?format=1000w 1000w, https://res.cloudinary.com/dubdpmdwp/image/upload/v1732545304/av57z2ecunt1vvxhscgi.jpg?format=1500w 1500w, https://res.cloudinary.com/dubdpmdwp/image/upload/v1732545304/av57z2ecunt1vvxhscgi.jpg?format=2500w 2500w"
-                                      loading="lazy"
-                                      decoding="async"
-                                      data-loader="sqs"
-                                    />
-                                    <div className="fluidImageOverlay" />
-                                  </div>
+<Data2 posts={posts}/>
                                 </div>
                               </div>
                             </div>
@@ -243,51 +219,8 @@ content-width--wide
                         </div>
                       </div>
                       <div className="fe-block fe-block-60cd32dd32cfbc9ff71c">
-  <div
-    className="sqs-block html-block sqs-block-html"
-    data-blend-mode="NORMAL"
-    data-block-type={2}
-    data-border-radii='{"topLeft":{"unit":"px","value":0.0},"topRight":{"unit":"px","value":0.0},"bottomLeft":{"unit":"px","value":0.0},"bottomRight":{"unit":"px","value":0.0}}'
-    id="block-60cd32dd32cfbc9ff71c"
-  >
-    <div className="sqs-block-content">
-      <div className="sqs-html-content">
-        <h2 style={{ whiteSpace: "pre-wrap" }}>Jad Zeitouni</h2>
-        <h3 style={{ whiteSpace: "no-wrap" ,fontSize: "11px"}}>
-          Engineer | Artist | Dreamer | Visionary
-        </h3>
-        <p
-          className="sqsrte-small"
-          style={{ whiteSpace: "pre-wrap" }}
-        >
-          Art has taught me to see beyond the ordinary, to embrace the unexpected, and to fill life with as much color as I can
-        </p>
-        {/* Add icons section */}
-        <div className="icon-links" style={{ marginTop: "1rem", display: "flex", gap: "1rem", justifyContent: "center" }}>
-          <a
-            href="/cv.pdf" // Replace with the actual link to the CV
-            target="_blank"
-            rel="noopener noreferrer"
-            className="icon-link"
-            style={{ textDecoration: "none", color: "inherit", display: "flex", alignItems: "center", gap: "0.5rem" }}
-          >
-            <i className="fas fa-file-alt" style={{ fontSize: "1.5rem" }}></i> {/* CV Icon */}
-            CV/Resume
-          </a>
-          <a
-            href="/port.pdf" // Replace with the actual link to the portfolio
-            target="_blank"
-            rel="noopener noreferrer"
-            className="icon-link"
-            style={{ textDecoration: "none", color: "inherit", display: "flex", alignItems: "center", gap: "0.5rem" }}
-          >
-            <i className="fas fa-briefcase" style={{ fontSize: "1.5rem" }}></i> {/* Portfolio Icon */}
-            Portfolio
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+
+  <Data3 posts={posts}/>
 </div>
 
                     </div>

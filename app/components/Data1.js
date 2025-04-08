@@ -20,11 +20,11 @@ const Data1 = ({ posts }) => {
         slidesPerView={1}
         className="w-full h-full"
       >
-        {posts.map((post, index) => (
+        {posts[0].fields.images.map((post, index) => (
           <SwiperSlide key={index}>
             <div className="w-screen h-screen flex justify-center items-center md:w-[1920px] md:h-[1080px]">
               <img
-                src={post.fields.img.fields.file.url}
+                src={post.fields.file.url}
                 alt={`Slide ${index + 1}`}
                 className="w-full h-full object-cover"
               />
