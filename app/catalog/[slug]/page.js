@@ -38,7 +38,7 @@ const BlogPost = async ({ params }) => {
           <img
             key={index}
             src={image.fields.file.url}
-            alt={image.fields.title || `Image ${index + 1}`}
+           alt="Jad zeitouni"
             className="detail-image"
           />
         ))}

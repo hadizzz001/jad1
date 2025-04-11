@@ -49,7 +49,7 @@ const Data1 = ({ posts }) => {
             <div className="w-screen h-screen flex justify-center items-center md:w-[1920px] md:h-[1080px]">
               <img
                 src={image.fields.file.url}
-                alt={`Slide ${index + 1}`}
+                alt="Jad zeitouni"
                 className="w-full h-full object-cover"
               />
             </div>

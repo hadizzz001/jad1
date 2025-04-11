@@ -26,9 +26,9 @@ const BlogPage = async () => {
             return (
               <div key={post.sys.id} className="blog-card">
                 <img
-                  src={imageUrl}
-                  alt={post.fields.title || 'Blog Image'}
+                  src={imageUrl} 
                   className="blog-image"
+                  alt="Jad zeitouni"
                 />
                 <div className="blog-content">
                   <h2>{post.fields.title || 'Untitled'}</h2>

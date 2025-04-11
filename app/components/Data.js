@@ -32,7 +32,7 @@ const Data = (posts) => {
             >
               <img
                 src={post.fields.img.fields.file.url}
-                alt={`Exhibition Image ${post.sys.id + 1}`}
+                alt="Jad zeitouni"
                 className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -66,7 +66,7 @@ const Data = (posts) => {
           {/* Enlarged Image */}
           <img
             src={selectedImage}
-            alt="Selected Exhibition"
+           alt="Jad zeitouni"
             className="max-w-full max-h-screen object-contain transition-transform duration-300"
           />
         </div>

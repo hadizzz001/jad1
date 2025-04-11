@@ -33,7 +33,7 @@ const BlogPost = async ({ params }) => {
       <p>{new Date(post.fields.publishedDate).toDateString()}</p>
       <img
         src={post.fields.featuredImage.fields.file.url}
-        alt={post.fields.title}
+        alt="Jad zeitouni"
         className="detail-image"
       />
       <div className="content">
