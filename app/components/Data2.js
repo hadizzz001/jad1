@@ -4,7 +4,7 @@ const Data2 = ({ posts }) => {
     return (
         <div className="content-fill">
             <img 
-                alt="" 
+                alt="Jad Zeitouni"
                 elementtiming="system-image-block"
                 src={posts[0].fields.profile.fields.file.url}
                 width={3484}

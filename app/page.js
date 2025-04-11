@@ -1,7 +1,7 @@
- 
-  
-import  Footer  from "./components/Footer";
-import  Nav  from "./components/Nav";
+
+
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
 import Data1 from "./components/Data1";
 import Data2 from "./components/Data2";
 import Data3 from "./components/Data3";
@@ -14,17 +14,20 @@ const fetchPosts = async () => {
 };
 
 
- 
+
 const ExhibitionGallery = async () => {
 
- 
-  const posts = await fetchPosts(); 
- 
+
+  const posts = await fetchPosts();
+
   return (
 
-    <> 
 
-      <Data1 posts={posts} />
+
+
+    <>
+
+      <Data1 posts={posts[0]} />
 
 
       <div id="siteWrapper" className="clearfix site-wrapper">
@@ -55,7 +58,7 @@ const ExhibitionGallery = async () => {
             </span>
           </a>
         </div>
-<Nav/>
+        <Nav />
         <main id="page" className="container" role="main">
           <article
             className="sections"
@@ -205,7 +208,7 @@ content-width--wide
                                     height: "100%"
                                   }}
                                 >
-<Data2 posts={posts}/>
+                                  <Data2 posts={posts} />
                                 </div>
                               </div>
                             </div>
@@ -220,8 +223,8 @@ content-width--wide
                       </div>
                       <div className="fe-block fe-block-60cd32dd32cfbc9ff71c">
 
-  <Data3 posts={posts}/>
-</div>
+                        <Data3 posts={posts} />
+                      </div>
 
                     </div>
                   </div>
@@ -230,9 +233,9 @@ content-width--wide
             </section>
           </article>
         </main>
-<Footer/>
+        <Footer />
       </div>
- 
+
     </>
 
   );

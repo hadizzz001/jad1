@@ -11,10 +11,10 @@ const Data4 = ({posts, posts1}) => {
             <div
                 class="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last">
                 <div class="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
-                    <img class=" rounded-xl object-cover" src={posts[0].fields.images[0].fields.file.url} alt="about Us image" />
+                    <img class=" rounded-xl object-cover" src={posts[0].fields.images[0].fields.file.url} alt="Jad Zeitouni" />
                 </div>
                 <img class="sm:ml-0 ml-auto rounded-xl object-cover" src={posts[0].fields.images[1].fields.file.url}
-                    alt="about Us image" />
+                    alt="Jad Zeitouni" />
             </div>
             <div class="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
                 <div class="w-full flex-col justify-center items-start gap-8 flex">
