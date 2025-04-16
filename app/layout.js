@@ -84,10 +84,9 @@ export default function RootLayout({ children }) {
   />
   <meta
     name="description"
-    content="Imagery from the North | A collection of works by Iceland based 
-photographer Jad Zeitouni."
+    content="Art has taught me to see beyond the ordinary, to embrace the unexpected, and to fill life with as much color as I can"
   />
-  <link rel="preconnect" href="https://images.squarespace-cdn.com" />
+ 
   <link
     rel="stylesheet"
     type="text/css"
@@ -104,6 +103,8 @@ photographer Jad Zeitouni."
     type="text/css"
     href="https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/versioned-assets/1728407958569-DI71YIND73BBQN7RBZCZ/static.css"
   />
+
+<link rel="icon" href="/favicon.png" type="image/png" />
 </head>
 
       <body
