@@ -24,8 +24,7 @@ export default function RootLayout({ children }) {
 <head>
   <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {/* This is Squarespace. */}
-  {/* benjamin-hardman */}
+ 
   <base href="" />
   <meta charSet="utf-8" />
   <title>Jad Zeitouni</title>
@@ -38,7 +37,7 @@ export default function RootLayout({ children }) {
     type="image/x-icon"
     href="/logo1.jpg"
   />
-  <link rel="canonical" href="index.html" />
+ 
   <meta property="og:site_name" content="Jad Zeitouni" />
   <meta property="og:title" content="Jad Zeitouni" />
   <meta property="og:url" content="https://jadzeitouni.com" />
@@ -52,36 +51,8 @@ export default function RootLayout({ children }) {
     content="https://res.cloudinary.com/dubdpmdwp/image/upload/v1743879473/sbbbotlexw87dda1ojdo.webp"
   />
   <meta property="og:image:width" content={1500} />
-  <meta property="og:image:height" content={1875} />
-  <meta itemProp="name" content="Jad Zeitouni" />
-  <meta itemProp="url" content="https://jadzeitouni.com" />
-  <meta
-    itemProp="description"
-    content="Art has taught me to see beyond the ordinary, to embrace the unexpected, and to fill life with as much color as I can"
-  />
-  <meta
-    itemProp="thumbnailUrl"
-    content="https://res.cloudinary.com/dubdpmdwp/image/upload/v1743879473/sbbbotlexw87dda1ojdo.webp"
-  />
-  <link
-    rel="image_src"
-    href="https://res.cloudinary.com/dubdpmdwp/image/upload/v1743879473/sbbbotlexw87dda1ojdo.webp"
-  />
-  <meta
-    itemProp="image"
-    content="https://res.cloudinary.com/dubdpmdwp/image/upload/v1743879473/sbbbotlexw87dda1ojdo.webp"
-  />
-  <meta name="twitter:title" content="Jad Zeitouni" />
-  <meta
-    name="twitter:image"
-    content="https://res.cloudinary.com/dubdpmdwp/image/upload/v1743879473/sbbbotlexw87dda1ojdo.webp"
-  />
-  <meta name="twitter:url" content="https://jadzeitouni.com" />
-  <meta name="twitter:card" content="summary" />
-  <meta
-    name="twitter:description"
-    content="Art has taught me to see beyond the ordinary, to embrace the unexpected, and to fill life with as much color as I can"
-  />
+  <meta property="og:image:height" content={1875} /> 
+ 
   <meta
     name="description"
     content="Art has taught me to see beyond the ordinary, to embrace the unexpected, and to fill life with as much color as I can"
