@@ -13,10 +13,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata = {
-  title: "Jad Zeitouni",
-  description: "Art has taught me to see beyond the ordinary, to embrace the unexpected, and to fill life with as much color as I can",
-};
+ 
 
 export default function RootLayout({ children }) {
   return (
@@ -50,8 +47,7 @@ export default function RootLayout({ children }) {
     property="og:image"
     content="https://res.cloudinary.com/dubdpmdwp/image/upload/v1743879473/sbbbotlexw87dda1ojdo.webp"
   />
-  <meta property="og:image:width" content={1500} />
-  <meta property="og:image:height" content={1875} /> 
+ 
  
   <meta
     name="description"
