@@ -21,8 +21,7 @@ const ExhibitionGallery = async () => {
   return (
     <>
       <Nav />
-      <Data posts={posts} />
-
+      <Data posts={posts} /> 
       <Footer />
     </>
   );

@@ -1,5 +1,7 @@
 "use client"
 import React, { useState } from "react";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 
 
 
@@ -23,6 +25,7 @@ const Data = (posts) => {
 
 
         {posts.posts.map((post) => {
+const { desc } = post.fields 
 
           return ( 
             <div
@@ -35,6 +38,9 @@ const Data = (posts) => {
                 alt="Jad zeitouni"
                 className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
               />
+              <p>
+                {documentToReactComponents(desc)}
+              </p>
             </div>
 
 
